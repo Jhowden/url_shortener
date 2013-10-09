@@ -14,6 +14,7 @@ end
 get '/:short_url' do
   # redirect to appropriate "long" URL
   url_finder = Url.find_by_shortened_url(params[:short_url])
+  Url.update_counters(url_finder.id, :counter => 1)
   redirect to "http://#{url_finder.url}"
 end
 

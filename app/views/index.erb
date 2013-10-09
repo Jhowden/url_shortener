@@ -9,13 +9,14 @@
     <br>
   <table>
     <tr>
-      <th>shortened links:</th>
+      <th>url</th><th>shortened url</th> <th> number of clicks</th>
     </tr>
     <% @shortened_links.each do |links| %>
 
     <tr>
       <td class="list_table"> <%= links.url %> </td>
       <td class="list_table"> <%= links.shortened_url %>  </td>
+      <td class="list_table"> <%= links.counter %> </td>
      <% end %>
     </tr>
   </table>

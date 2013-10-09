@@ -7,7 +7,7 @@ class Url < ActiveRecord::Base
 
   def shorten_url
     rand_letters = ("a".."z").to_a
-      self.shortened_url = "#{rand(1..10)}#{rand_letters.sample}"
+      self.shortened_url = "#{rand(1..10)}#{rand_letters.sample}#{rand(1..10)}"
   end
 
 end
