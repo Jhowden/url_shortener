@@ -1,6 +1,6 @@
 class Url < ActiveRecord::Base
   # Remember to create a migration!
-  validates :url, presence: true
+  validates :url, presence: true 
   
 
   before_save :shorten_url

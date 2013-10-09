@@ -4,10 +4,8 @@ get '/' do
   erb :index
 end
 
-post '/urls' do
-  # create a new Url
-  @url = Url.create(url: params[:link])
-  redirect to "/"
+get '/error' do
+  erb :error_page
 end
 
 # e.g., /q6bda
@@ -17,6 +15,38 @@ get '/:short_url' do
   Url.update_counters(url_finder.id, :counter => 1)
   redirect to "http://#{url_finder.url}"
 end
+
+
+post '/urls' do
+  # create a new Url
+  if Url.create(url: params[:link]).valid?
+    @url = Url.create(url: params[:link])
+    redirect to "/"
+  else
+    redirect to "/error"
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
