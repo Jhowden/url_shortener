@@ -1,7 +1,12 @@
 <div class="container">
   <h1>Welcome to our link shortener!</h1>
   <p>shorten a link</p>
-
+    <form action="/urls" method="POST">
+     <label for="new_url"> URL</label>
+     <input type="text" id="new_url" name="link">
+     <input type="submit">
+    </form>
+    <br>
   <table>
     <tr>
       <th>shortened links:</th>
@@ -14,8 +19,5 @@
     </tr>
   </table>
 
-  <form action="/urls" method="POST">
-   <label for="" <input type
-    
-  </form>
+
 </div>

@@ -6,6 +6,8 @@ end
 
 post '/urls' do
   # create a new Url
+  @url = Url.create(url: params[:link])
+  redirect to "/"
 end
 
 # e.g., /q6bda
