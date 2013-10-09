@@ -13,7 +13,8 @@ end
 # e.g., /q6bda
 get '/:short_url' do
   # redirect to appropriate "long" URL
-  url_finder = Url.
+  url_finder = Url.find_by_shortened_url(params[:short_url])
+  redirect to "http://#{url_finder.url}"
 end
 
 
