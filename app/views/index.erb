@@ -14,7 +14,8 @@
     <% @shortened_links.each do |links| %>
 
     <tr>
-      <td> <%= links.url %> </td>
+      <td class="list_table"> <%= links.url %> </td>
+      <td class="list_table"> <%= links.shortened_url %>  </td>
      <% end %>
     </tr>
   </table>
