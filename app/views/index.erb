@@ -2,7 +2,7 @@
   <h1>Welcome to our link shortener!</h1>
   <p>shorten a link</p>
     <form action="/urls" method="POST">
-     <label for="new_url"> URL</label>
+     <label for="new_url">URL</label>
      <input type="text" id="new_url" name="link">
      <input type="submit">
     </form>
@@ -15,7 +15,7 @@
 
     <tr>
       <td class="list_table"> <%= links.url %> </td>
-      <td class="list_table"> <%= links.shortened_url %>  </td>
+      <td class="list_table"> <a href="http://localhost:9393/<%= links.shortened_url %>"><%= links.shortened_url %></a></td>
       <td class="list_table"> <%= links.counter %> </td>
      <% end %>
     </tr>

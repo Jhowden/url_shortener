@@ -19,7 +19,7 @@ end
 
 post '/urls' do
   # create a new Url
-  if Url.create(url: params[:link]).valid?
+  if Url.new(url: params[:link]).valid?
     @url = Url.create(url: params[:link])
     redirect to "/"
   else
